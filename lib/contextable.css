@@ -1,0 +1,24 @@
+.contextable-menu {
+  background: #fff;
+  color: #111;
+  position: absolute;
+  margin: 0;
+  border: 1px rgba(0,0,0,0.2) solid;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  padding: 5px 0px;
+}
+
+.contextable-item {
+  list-style-type: none;
+  padding: 5px 15px 5px 5px;
+  height: 20px;
+}
+
+.contextable-item:hover {
+  cursor: pointer;
+  background: #eee;
+}
+
+.contextable-item img {
+  max-height: 100%;
+}

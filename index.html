@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="lib/contextable.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/contextable.css">
+    <style>
+      .clickable {
+        margin: 10px;
+        width: 400px;
+        height: 400px;
+        background: #fafafa;
+        border: 1px solid #666;
+        font-weight: bold;
+      }
+
+      .basic {
+        background: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clickable">
+      <p>Right click here!</p>
+    </div>
+  </body>
+  <script>
+    $(".clickable").contextable([{
+      html: "<i class='icon-plus-sign'></i> Add Class",
+      handler: function(e, ev) {
+        console.log('clicked');
+        console.log($(ev.target));
+        $(ev.target).addClass('basic');
+      }
+    }, {
+      html: "<i class='icon-remove-sign'></i> Remove Class",
+      handler: function(e, ev) {
+        console.log('clicked');
+        console.log($(ev.target));
+        $(ev.target).removeClass('basic');
+      }
+    }, {
+      html: "<i class='icon-move'></i> Free Transform",
+      handler: function(e, ev) {
+        console.log("test");
+      }
+    }]);
+  </script>
+</html>
