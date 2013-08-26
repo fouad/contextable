@@ -1,6 +1,11 @@
 {
   "name": "contextable",
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "author": {
+    "name": "Fouad Matin",
+    "email": "holla@fouad.co",
+    "url": "http://fouad.co"
+  },
   "main": [
     "./lib/contextable.js",
     "./lib/contextable.css"
